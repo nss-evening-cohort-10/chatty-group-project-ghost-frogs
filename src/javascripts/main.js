@@ -1,11 +1,11 @@
 import 'bootstrap';
 import navbar from './components/navbar/navbar';
 import '../styles/main.scss';
-import placeholder from './components/placeholder';
+import placeholder from './components/placeholder/placeholder';
 
 const init = () => {
-  placeholder.makeText();
   navbar.createNavbar();
+  placeholder.makeText();
 };
 
 init();
