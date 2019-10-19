@@ -1,7 +1,7 @@
 import moment from 'moment';
-import utilities from '../helpers/utilities';
+import utilities from '../../helpers/utilities';
 import './placeholder.scss';
-import m from '../helpers/data/messages';
+import m from '../../helpers/data/messages';
 
 const messages = m.getMessages();
 
@@ -23,11 +23,5 @@ const makeText = () => {
   }
   utilities.printToDom('chatBox', domString);
 };
-
-
-// const timeStamp = () => {
-//   moment().format('LLL');
-//   $("moment().format('LLL')").append($('.inner'));
-// };
 
 export default { makeText };

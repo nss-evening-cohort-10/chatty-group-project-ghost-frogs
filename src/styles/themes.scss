@@ -1,0 +1,39 @@
+$themes: (
+  light: (
+    backgroundColor: rgb(233, 233, 233),
+    barBackground: gray,
+    barText: black,
+    inputBackground: rgb(233, 233, 233),
+    inputPlaceholderText: rgb(95, 133, 145),
+    messageBackground: white,
+    messageHeadTextColor: black,
+    messageTextColor: black,
+    messageTimestampColor: rgb(95, 133, 145),
+    buttonBackground: rgb(11, 103, 131),
+    buttonText: white,
+    shadowBox: 3px 5px 5px rgb(63, 62, 62),
+  )
+  // dark: (
+
+  // )
+);
+
+// Implmentation of themes
+
+@mixin themify($themes) {
+  @each $theme, $map in $themes {
+    .theme-#{$theme} & {
+      $theme-map: () !global;
+      @each $key, $submap in $map {
+        $value: map-get(map-get($themes, $theme), '#{$key}');
+        $theme-map: map-merge($theme-map, ($key: $value)) !global;
+      }
+      @content;
+      $theme-map: null !global;
+    }
+  }
+}
+
+@function themed($key) {
+  @return map-get($theme-map, $key);
+}
