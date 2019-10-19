@@ -1,5 +1,32 @@
 @import "~bootstrap/scss/bootstrap";
+@import './themes.scss';
 
-body {
-  background-color: blue;
+.app-container {
+  @include themify($themes) {
+    background-color: themed('backgroundColor');
+    height: 100vh;
+  }
+  .navbar {
+    @include themify($themes) {
+    background-color: themed('barBackground');
+    box-shadow: themed('shadowBox');
+    }
+  }
+  .sampleBox {
+    @include themify($themes) {
+      box-shadow: themed('shadowBox');
+      background-color: themed('messageBackground');
+      border: 1px solid black;
+    }
+  }
+  button {
+    @include themify($themes) {
+      background-color: themed('buttonBackground');
+      color: themed('buttonText');
+    }
+  }
+  .checkSet {
+    margin: 10px;
+  }
+
 }
