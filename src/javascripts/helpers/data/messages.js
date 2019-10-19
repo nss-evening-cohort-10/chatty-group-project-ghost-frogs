@@ -1,7 +1,10 @@
+import moment from 'moment';
+
 const messages = [
   {
     name: 'Beetlejuice',
     text: 'Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis.',
+    timeStamp: moment().format('LLL'),
   },
   {
     name: 'Casper',
