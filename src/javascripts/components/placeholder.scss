@@ -1,3 +1,14 @@
 #chatBox{
   background-color:ghostwhite;
+  margin: 50px;
+  padding: 50px;
+}
+
+li {
+  list-style-type: none;
+  padding: 50px;
+}
+
+li:nth-child(even){
+  background-color: blue;
 }

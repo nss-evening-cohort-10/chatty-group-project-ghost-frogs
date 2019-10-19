@@ -5,7 +5,6 @@ import placeholder from './components/placeholder';
 
 const init = () => {
   placeholder.makeText();
-  placeholder.timeStamp();
   navbar.createNavbar();
 };
 
