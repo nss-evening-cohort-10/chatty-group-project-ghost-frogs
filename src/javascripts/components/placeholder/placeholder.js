@@ -1,9 +1,4 @@
-<<<<<<< HEAD:src/javascripts/components/placeholder.js
-import utilities from '../helpers/utilities';
-=======
-import moment from 'moment';
 import utilities from '../../helpers/utilities';
->>>>>>> master:src/javascripts/components/placeholder/placeholder.js
 import './placeholder.scss';
 import m from '../../helpers/data/messages';
 
