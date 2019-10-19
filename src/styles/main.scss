@@ -1,5 +1,20 @@
 @import "~bootstrap/scss/bootstrap";
+@import './themes.scss';
 
-body {
-  background-color: blue;
+.app-container {
+  @include themify($themes) {
+    background-color: themed('backgroundColor');
+  }
+  .navbar {
+    @include themify($themes) {
+    background-color: themed('barBackground');
+    }
+  }
+  button {
+    @include themify($themes) {
+      background-color: themed('buttonBackground');
+      color: themed('buttonText');
+    }
+  }
+
 }
