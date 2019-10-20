@@ -13,6 +13,7 @@ const init = () => {
   // placeholder.timeStamp();
   theme.addCheckListener();
   addMessages.inputCreateMessage();
+  addMessages.deleteMessage();
   largeText.addLargeCheckListener();
   customizer.init();
 };
