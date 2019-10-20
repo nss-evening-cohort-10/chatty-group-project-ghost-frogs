@@ -1,13 +1,19 @@
 import $ from 'jquery';
+import 'bootstrap';
 import moment from 'moment';
-import utilities from '../../helpers/utilities';
+import './addMessages.scss';
 
 const addMessage = (e) => {
   const typedValue = e.target.value;
   console.log(typedValue);
-  let newMessage = $();
-  newMessage += `<div class="alert"><span class="closebtn" >&times;</span>${typedValue}</div><div>${moment().format('LLL')}</div>`;
-  utilities.printToDom('messageContainer', newMessage);
+  let newMessage = [];
+  newMessage += `
+    <div class="newMessageContainer">
+      <span class="closebtn">×</span>
+      <p>${typedValue}</p>
+      <div>${moment().format('LLL')}</div>
+    </div>`;
+  $('#chatBox').prepend(newMessage);
 };
 
 const inputCreateMessage = () => {
@@ -15,6 +21,7 @@ const inputCreateMessage = () => {
     if (e.keyCode === 13) {
       e.preventDefault();
       addMessage(e);
+      $('#myInput').val('');
     }
   });
 };

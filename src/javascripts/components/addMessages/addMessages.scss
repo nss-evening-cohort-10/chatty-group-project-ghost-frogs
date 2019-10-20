@@ -1,0 +1,25 @@
+
+.newMessageContainer {
+  max-width: 300px;
+  min-width: 20px;
+  margin-top: 1em;
+  margin-left: auto;
+  margin-right: 5px;
+  padding: 8px;
+  background-color: lightskyblue;
+  color: white;
+  border-radius: 18px;
+}
+
+.closebtn {
+  top: 2px;
+  right: 15px;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  float: right;
+}
+
+.closebtn:hover {
+  color: lightgrey;
+}

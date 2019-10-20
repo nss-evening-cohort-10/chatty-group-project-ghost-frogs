@@ -12,10 +12,21 @@ $themes: (
     buttonBackground: rgb(11, 103, 131),
     buttonText: white,
     shadowBox: 3px 5px 5px rgb(63, 62, 62),
+  ),
+  dark: (
+    backgroundColor: rgb(26, 26, 26),
+    barBackground: #313131,
+    barText: rgb(233, 233, 233),
+    inputBackground: rgb(206, 206, 206),
+    inputPlaceholderText: rgb(95, 133, 145),
+    messageBackground: #262626,
+    messageHeadTextColor: rgb(233, 233, 233),
+    messageTextColor: rgb(233, 233, 233),
+    messageTimestampColor: rgb(95, 133, 145),
+    buttonBackground: black,
+    buttonText: white,
+    shadowBox: 3px 5px 5px black,
   )
-  // dark: (
-
-  // )
 );
 
 // Implmentation of themes
