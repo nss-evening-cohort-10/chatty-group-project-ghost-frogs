@@ -26,6 +26,20 @@ $themes: (
     buttonBackground: black,
     buttonText: white,
     shadowBox: 3px 5px 5px black,
+  ),
+  wickedwitch: (
+    backgroundColor: rgb(150, 0, 180),
+    barBackground: black,
+    barText: rgb(19, 218, 19),
+    inputBackground: white,
+    inputPlaceholderText: rgb(150, 0, 180),
+    messageBackground: rgb(19, 218, 19),
+    messageHeadTextColor: black,
+    messageTextColor: black,
+    messageTimestampColor: rgb(97, 0, 97),
+    buttonBackground: rgb(97, 0, 97),
+    buttonText: white,
+    shadowBox: 3px 5px 5px black,
   )
 );
 

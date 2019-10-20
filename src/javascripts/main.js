@@ -4,6 +4,7 @@ import '../styles/main.scss';
 import placeholder from './components/placeholder/placeholder';
 import theme from './components/themeChanger/themeChange';
 import largeText from './components/largetext/largeText';
+import customizer from './components/customizer/customizer';
 
 const init = () => {
   navbar.createNavbar();
@@ -11,6 +12,7 @@ const init = () => {
   // placeholder.timeStamp();
   theme.addCheckListener();
   largeText.addLargeCheckListener();
+  customizer.init();
 };
 
 init();
