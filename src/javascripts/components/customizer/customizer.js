@@ -15,7 +15,7 @@ const modalPrinter = () => {
               </button>
             </div>
             <div class="modal-body">
-            <div class="form-check">
+          <div class="form-check">
             <input class="form-check-input" type="radio" name="themeOptions" id="lightOption" value="light" checked>
             <label class="form-check-label" for="lightOption">
               Light Theme (default)
@@ -27,10 +27,34 @@ const modalPrinter = () => {
               Wicked Witch Theme
             </label>
           </div>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="themeOptions" id="darkOption" value="dark">
+          <label class="form-check-label" for="darkOption">
+            Dark Theme
+          </label>
+        </div>
+        <div class="form-check">
+        <input class="form-check-input" type="radio" name="themeOptions" id="ghostOption" value="ghostbusters">
+        <label class="form-check-label" for="ghostOption">
+          Ghostbusters Theme
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="themeOptions" id="pumpkinOption" value="pumpkin">
+        <label class="form-check-label" for="pumpkinOption">
+          Pumpkin Theme
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="themeOptions" id="beetlejuiceOption" value="beetlejuice">
+        <label class="form-check-label" for="beetlejuiceOption">
+          Beetlejuice Theme
+        </label>
+      </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn" data-dismiss="modal">Close</button>
-                <button id="themeSaveBtn" type="button" class="btn">Save changes</button>
+                <button id="themeSaveBtn" type="button" data-dismiss="modal" class="btn">Save changes</button>
             </div>
           </div>
         </div>
@@ -40,7 +64,11 @@ const modalPrinter = () => {
 };
 
 const updateTheme = () => {
-  console.log($('input:radio'));
+  const radioValue = $("input[name='themeOptions']:checked").val();
+  console.log(radioValue);
+  const root = $('#appRoot');
+  root.removeClass();
+  root.toggleClass(`theme-${radioValue}`);
 };
 
 const saveTheme = () => {

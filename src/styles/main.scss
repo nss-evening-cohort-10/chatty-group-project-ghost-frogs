@@ -3,6 +3,7 @@
 
 .app-container {
   @include themify($themes) {
+    // background-image: themed('backgroundImage');
     background-color: themed('backgroundColor');
     height: 100vh;
   }
@@ -48,6 +49,21 @@
       background-color: themed('inputBackground');
       color: themed('inputPlaceholderText');
       padding: 0;
+    }
+  }
+  .modal-body {
+    @include themify($themes) {
+      background-color: themed('inputBackground');
+    }
+  }
+  .modal-header {
+    @include themify($themes) {
+      background-color: themed('inputBackground');
+    }
+  }
+  .modal-footer {
+    @include themify($themes) {
+      background-color: themed('inputBackground');
     }
   }
 
