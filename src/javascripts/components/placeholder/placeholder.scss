@@ -4,13 +4,11 @@
   padding: 50px;
 }
 
-li {
-  list-style-type: none;
-  padding: 50px;
-}
-
-li:nth-child(even){
-  background-color: blue;
-  margin-top: 75px;
-
+ul {
+  display: flex;
+  
+  li {
+    list-style-type: none;
+    padding: 50px;
+  }
 }
