@@ -6,6 +6,8 @@
     // background-image: themed('backgroundImage');
     background-color: themed('backgroundColor');
     height: 100vh;
+    font-family: themed('fontType');
+    font-size: themed('fontSize');
   }
   .navbar {
     @include themify($themes) {

@@ -1,3 +1,9 @@
+// font-family: 'Caveat Brush', cursive;
+// font-family: 'Caveat', cursive;
+// font-family: 'Kalam', cursive;
+// font-family: 'Creepster', cursive;
+// font-family: 'Acme', sans-serif;
+
 $themes: (
   light: (
     backgroundColor: rgb(233, 233, 233),
@@ -28,6 +34,8 @@ $themes: (
     shadowBox: 3px 5px 5px black,
   ),
   wickedwitch: (
+    fontType: 'Creepster',
+    fontSize: 2em,
     backgroundColor: rgb(150, 0, 180),
     barBackground: black,
     barText: rgb(19, 218, 19),
@@ -42,6 +50,8 @@ $themes: (
     shadowBox: 3px 5px 5px black,
   ),
   ghostbusters: (
+    fontType: 'Acme',
+    fontSize: 2em,
     backgroundColor: rgb(5, 160, 0),
     barBackground: black,
     barText: rgb(187, 7, 7),
@@ -56,6 +66,8 @@ $themes: (
     shadowBox: 3px 5px 5px black,
   ),
   pumpkin: (
+    fontType: 'Kalam',
+    fontSize: 2em,
     backgroundColor: rgb(228, 121, 59),
     barBackground: rgb(99, 58, 42),
     barText: rgb(228, 209, 123),
@@ -70,6 +82,8 @@ $themes: (
     shadowBox: 3px 5px 5px black,
   ),
   beetlejuice: (
+    fontType: 'Creepster',
+    fontSize: 2em,
     backgroundColor: rgb(199, 199, 199),
     backgroundImage: image-url('https://www.shutterstock.com/image-photo/black-white-stripe-background-364199843', false, true),
     barBackground: rgb(29, 28, 28),
