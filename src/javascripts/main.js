@@ -4,6 +4,7 @@ import '../styles/main.scss';
 import placeholder from './components/placeholder/placeholder';
 import theme from './components/themeChanger/themeChange';
 import addMessages from './components/addMessages/addMessages';
+import largeText from './components/largetext/largeText';
 
 const init = () => {
   navbar.createNavbar();
@@ -11,6 +12,7 @@ const init = () => {
   // placeholder.timeStamp();
   theme.addCheckListener();
   addMessages.inputCreateMessage();
+  largeText.addLargeCheckListener();
 };
 
 init();
