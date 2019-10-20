@@ -15,42 +15,42 @@ const modalPrinter = () => {
               </button>
             </div>
             <div class="modal-body">
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="themeOptions" id="lightOption" value="light" checked>
-            <label class="form-check-label" for="lightOption">
-              Light Theme (default)
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="themeOptions" id="wickedOption" value="wickedwitch">
-            <label class="form-check-label" for="wickedOption">
-              Wicked Witch Theme
-            </label>
-          </div>
-          <div class="form-check">
-          <input class="form-check-input" type="radio" name="themeOptions" id="darkOption" value="dark">
-          <label class="form-check-label" for="darkOption">
-            Dark Theme
-          </label>
-        </div>
-        <div class="form-check">
-        <input class="form-check-input" type="radio" name="themeOptions" id="ghostOption" value="ghostbusters">
-        <label class="form-check-label" for="ghostOption">
-          Ghostbusters Theme
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="themeOptions" id="pumpkinOption" value="pumpkin">
-        <label class="form-check-label" for="pumpkinOption">
-          Pumpkin Theme
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="themeOptions" id="beetlejuiceOption" value="beetlejuice">
-        <label class="form-check-label" for="beetlejuiceOption">
-          Beetlejuice Theme
-        </label>
-      </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="themeOptions" id="lightOption" value="light" checked>
+                <label class="form-check-label" for="lightOption">
+                  Light Theme (default)
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="themeOptions" id="darkOption" value="dark">
+                <label class="form-check-label" for="darkOption">
+                  Dark Theme
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="themeOptions" id="wickedOption" value="wickedwitch">
+                <label class="form-check-label" for="wickedOption">
+                  Wicked Witch Theme
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="themeOptions" id="ghostOption" value="ghostbusters">
+                <label class="form-check-label" for="ghostOption">
+                  Ghostbusters Theme
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="themeOptions" id="pumpkinOption" value="pumpkin">
+                <label class="form-check-label" for="pumpkinOption">
+                  Pumpkin Theme
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="themeOptions" id="beetlejuiceOption" value="beetlejuice">
+                <label class="form-check-label" for="beetlejuiceOption">
+                  Beetlejuice Theme
+                </label>
+              </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn" data-dismiss="modal">Close</button>
@@ -65,7 +65,6 @@ const modalPrinter = () => {
 
 const updateTheme = () => {
   const radioValue = $("input[name='themeOptions']:checked").val();
-  console.log(radioValue);
   const root = $('#appRoot');
   root.removeClass();
   root.toggleClass(`theme-${radioValue}`);
