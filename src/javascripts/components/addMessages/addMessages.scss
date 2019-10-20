@@ -1,16 +1,10 @@
-#chatBox{
-  background-color:ghostwhite;
-  margin-top: 75px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
 
-
-.messageContainer {
-  margin-left: 5px;
+.newMessageContainer {
   max-width: 300px;
-  min-width: 80px;
+  min-width: 20px;
+  margin-top: 1em;
+  margin-left: auto;
+  margin-right: 5px;
   padding: 8px;
   background-color: lightskyblue;
   color: white;
