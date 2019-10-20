@@ -9,6 +9,7 @@
   .navbar {
     @include themify($themes) {
     background-color: themed('barBackground');
+    color: themed('barText');
     box-shadow: themed('shadowBox');
     }
   }
@@ -25,6 +26,31 @@
       color: themed('buttonText');
     }
   }
+  #chatBox {
+    @include themify($themes) {
+      background-color: themed('messageBackground');
+      color: themed('messageTextColor');
+    }
+  }
+  #messageContainer {
+    @include themify($themes) {
+      background-color: themed('messageBackground');
+      color: themed('messageTextColor');
+    }
+  }
+  input {
+    @include themify($themes) {
+      background-color: themed('inputBackground');
+    }
+  }
+  input::placeholder {
+    @include themify($themes) {
+      background-color: themed('inputBackground');
+      color: themed('inputPlaceholderText');
+      padding: 0;
+    }
+  }
+
   .checkSet {
     margin: 10px;
   }
