@@ -10,7 +10,7 @@ const makeText = () => {
   for (let i = 0; i < messages.length; i += 1) {
     if (messages[i].name === 'Beetlejuice') {
       domString += `
-    <div class="messageContainer" style="background-color:green;">
+    <div class="messageContainer message" style="background-color:green;">
       <span class="closebtn">×</span>
       <h6>${messages[i].name}</h6>
       <p>${messages[i].text}</p>
@@ -20,7 +20,7 @@ const makeText = () => {
   `;
     } else {
       domString += `
-    <div class="messageContainer" style="margin-right: 5px; margin-left: auto;">
+    <div class="messageContainer message" style="margin-right: 5px; margin-left: auto;">
       <span class="closebtn">×</span>
       <h6>${messages[i].name}</h6>
       <p>${messages[i].text}</p>

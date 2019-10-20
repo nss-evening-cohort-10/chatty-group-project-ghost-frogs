@@ -8,12 +8,19 @@ const addMessage = (e) => {
   console.log(typedValue);
   let newMessage = [];
   newMessage += `
-    <div class="newMessageContainer">
+    <div class="newMessageContainer message">
       <span class="closebtn">×</span>
       <p>${typedValue}</p>
       <div>${moment().format('LLL')}</div>
     </div>`;
   $('#chatBox').prepend(newMessage);
+};
+
+const deleteMessage = () => {
+  $('.closebtn').on('click', (event) => {
+    event.preventDefault();
+    $(event.target).parent('.message').remove();
+  });
 };
 
 const inputCreateMessage = () => {
@@ -22,8 +29,10 @@ const inputCreateMessage = () => {
       e.preventDefault();
       addMessage(e);
       $('#myInput').val('');
+      deleteMessage();
     }
   });
 };
 
-export default { inputCreateMessage };
+
+export default { inputCreateMessage, deleteMessage };
