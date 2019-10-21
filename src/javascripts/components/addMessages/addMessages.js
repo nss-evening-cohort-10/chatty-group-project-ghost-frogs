@@ -5,13 +5,12 @@ import './addMessages.scss';
 
 const addMessage = (e) => {
   const typedValue = e.target.value;
-  console.log(typedValue);
   let newMessage = [];
   newMessage += `
     <div class="newMessageContainer message">
       <span class="closebtn">×</span>
       <p>${typedValue}</p>
-      <div>${moment().format('LLL')}</div>
+      <div class="timestamp">${moment().format('LLL')}</div>
     </div>`;
   $('#chatBox').prepend(newMessage);
 };

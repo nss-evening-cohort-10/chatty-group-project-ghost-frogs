@@ -1,6 +1,5 @@
 #chatBox{
-  background-color:ghostwhite;
-  margin-top: 75px;
+  margin-top: 45px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -9,23 +8,16 @@
 
 .messageContainer {
   margin-left: 5px;
-  max-width: 300px;
+  max-width: 500px;
   min-width: 80px;
   padding: 8px;
-  background-color: lightskyblue;
-  color: white;
   border-radius: 18px;
 }
 
 .closebtn {
   top: 2px;
   right: 15px;
-  color: white;
   font-size: 18px;
   cursor: pointer;
   float: right;
-}
-
-.closebtn:hover {
-  color: lightgrey;
 }
