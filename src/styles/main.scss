@@ -30,16 +30,6 @@
   }
   #chatBox {
     @include themify($themes) {
-<<<<<<< HEAD
-      background-color: themed('messageBackground');
-      color: themed('messageTextColor');
-    }
-  }
-  #messageContainer {
-    @include themify($themes) {
-      background-color: themed('messageBackground');
-      color: themed('messageTextColor');
-=======
       background-color: themed('backgroundColor');
       color: themed('messageTextColor');
     }
@@ -56,7 +46,6 @@
       background-color: themed('messageBackground');
       color: themed('messageTextColor');
       box-shadow: themed('shadowBox');
->>>>>>> master
     }
   }
   input {
@@ -71,9 +60,6 @@
       padding: 0;
     }
   }
-<<<<<<< HEAD
-
-=======
   .modal-body {
     @include themify($themes) {
       background-color: themed('inputBackground');
@@ -101,7 +87,6 @@
       font-style: italic;
     }
   }
->>>>>>> master
   .checkSet {
     margin: 10px;
   }
