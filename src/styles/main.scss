@@ -4,7 +4,9 @@
 .app-container {
   @include themify($themes) {
     background-color: themed('backgroundColor');
-    height: 100vh;
+    height: 100%;
+    font-family: themed('fontType');
+    font-size: themed('fontSize');
   }
   .navbar {
     @include themify($themes) {
@@ -28,6 +30,7 @@
   }
   #chatBox {
     @include themify($themes) {
+<<<<<<< HEAD
       background-color: themed('messageBackground');
       color: themed('messageTextColor');
     }
@@ -36,6 +39,24 @@
     @include themify($themes) {
       background-color: themed('messageBackground');
       color: themed('messageTextColor');
+=======
+      background-color: themed('backgroundColor');
+      color: themed('messageTextColor');
+    }
+  }
+  .messageContainer {
+    @include themify($themes) {
+      background-color: themed('messageBackground');
+      color: themed('messageTextColor');
+      box-shadow: themed('shadowBox');
+    }
+  }
+  .newMessageContainer {
+    @include themify($themes) {
+      background-color: themed('messageBackground');
+      color: themed('messageTextColor');
+      box-shadow: themed('shadowBox');
+>>>>>>> master
     }
   }
   input {
@@ -50,7 +71,37 @@
       padding: 0;
     }
   }
+<<<<<<< HEAD
 
+=======
+  .modal-body {
+    @include themify($themes) {
+      background-color: themed('inputBackground');
+    }
+  }
+  .modal-header {
+    @include themify($themes) {
+      background-color: themed('inputBackground');
+    }
+  }
+  .modal-footer {
+    @include themify($themes) {
+      background-color: themed('inputBackground');
+    }
+  }
+  .largeTextCheck {
+    @include themify($themes) {
+      background-color: themed('buttonBackground');
+      color: themed('buttonText');
+    }
+  }
+  .timestamp {
+    @include themify($themes) {
+      color: themed('messageTimestampColor');
+      font-style: italic;
+    }
+  }
+>>>>>>> master
   .checkSet {
     margin: 10px;
   }

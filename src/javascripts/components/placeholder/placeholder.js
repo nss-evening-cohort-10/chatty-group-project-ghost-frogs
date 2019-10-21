@@ -5,19 +5,29 @@ import m from '../../helpers/data/messages';
 const messages = m.getMessages();
 
 const makeText = () => {
-  let domString = `<ul>
-  `;
+  let domString = [];
   for (let i = 0; i < messages.length; i += 1) {
-    domString += `
-    <div id="messageContainer" class="card">
-      <li class="card-body">
-        <h6>${messages[i].name}</h6>
-        <p>${messages[i].text}</p>
-        <p>${messages[i].timeStamp}</p>
-      </li>
+    if (messages[i].name === 'Beetlejuice') {
+      domString += `
+    <div class="messageContainer message">
+      <span class="closebtn">×</span>
+      <h6>${messages[i].name}</h6>
+      <p>${messages[i].text}</p>
+      <div class="timestamp">${messages[i].timeStamp}</div>
     </div>
+    <br>
   `;
-    domString += '</ul>';
+    } else {
+      domString += `
+    <div class="messageContainer message" style="margin-right: 5px; margin-left: auto;">
+      <span class="closebtn">×</span>
+      <h6>${messages[i].name}</h6>
+      <p>${messages[i].text}</p>
+      <div class="timestamp">${messages[i].timeStamp}</div>
+    </div>
+    <br>
+  `;
+    }
   }
   utilities.printToDom('chatBox', domString);
 };
