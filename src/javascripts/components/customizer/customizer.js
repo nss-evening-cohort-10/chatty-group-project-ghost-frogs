@@ -45,12 +45,12 @@ const modalPrinter = () => {
                   Pumpkin Theme
                 </label>
               </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="themeOptions" id="beetlejuiceOption" value="beetlejuice">
-                <label class="form-check-label" for="beetlejuiceOption">
-                  Beetlejuice Theme
-                </label>
-              </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="themeOptions" id="beetlejuiceOption" value="beetlejuice">
+              <label class="form-check-label" for="beetlejuiceOption">
+                Beetlejuice Theme
+              </label>
+            </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn" data-dismiss="modal">Close</button>
