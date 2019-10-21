@@ -1,8 +1,9 @@
+import $ from 'jquery';
 // import utilities from '../../helpers/utilities';
 
 const clearMessages = () => {
-  $('.clearBtn').click(() => {
-    $('chatBox').empty();
+  $('#clearBtn').on('click', () => {
+    $('#messageContainer').empty();
   });
 };
 
