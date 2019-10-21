@@ -10,7 +10,7 @@ const makeText = () => {
   for (let i = 0; i < messages.length; i += 1) {
     if (messages[i].name === 'Beetlejuice') {
       domString += `
-    <div class="messageContainer">
+    <div class="messageContainer message">
       <span class="closebtn">×</span>
       <h6>${messages[i].name}</h6>
       <p>${messages[i].text}</p>
