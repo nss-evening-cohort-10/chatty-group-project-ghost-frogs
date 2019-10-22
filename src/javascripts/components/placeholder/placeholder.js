@@ -9,7 +9,7 @@ const messagePrinter = () => {
     domString += `
     <div class="messageContainer message" style="margin-right: 5px; margin-left: auto;">
       <span class="closebtn" id="${messages[i].id}">×</span>
-      <h6>${messages[i].name}</h6>
+      <h3>${messages[i].name}</h3>
       <p>${messages[i].text}</p>
       <div class="timestamp">${messages[i].timeStamp}</div>
     </div>
