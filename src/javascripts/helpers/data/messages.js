@@ -1,4 +1,4 @@
-const messages = [
+let messages = [
   {
     name: 'Beetlejuice',
     text: 'Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis.',
@@ -28,4 +28,8 @@ const messages = [
 
 const getMessages = () => messages;
 
-export default { getMessages };
+const clearMessages = () => {
+  messages = [];
+};
+
+export default { getMessages, clearMessages };

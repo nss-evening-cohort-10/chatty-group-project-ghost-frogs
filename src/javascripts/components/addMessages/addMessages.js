@@ -25,6 +25,7 @@ const deleteMessage = () => {
 const inputCreateMessage = () => {
   $('#myInput').on('keyup', (e) => {
     if (e.keyCode === 13) {
+      $('.clearing').attr('disabled', false);
       e.preventDefault();
       addMessage(e);
       $('#myInput').val('');
