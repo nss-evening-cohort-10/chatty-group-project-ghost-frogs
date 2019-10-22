@@ -1,3 +1,9 @@
+// font-family: 'Caveat Brush', cursive;
+// font-family: 'Caveat', cursive;
+// font-family: 'Kalam', cursive;
+// font-family: 'Creepster', cursive;
+// font-family: 'Acme', sans-serif;
+
 $themes: (
   light: (
     backgroundColor: rgb(233, 233, 233),
@@ -12,10 +18,86 @@ $themes: (
     buttonBackground: rgb(11, 103, 131),
     buttonText: white,
     shadowBox: 3px 5px 5px rgb(63, 62, 62),
+  ),
+  dark: (
+    backgroundColor: rgb(26, 26, 26),
+    barBackground: #313131,
+    barText: rgb(233, 233, 233),
+    inputBackground: rgb(206, 206, 206),
+    inputPlaceholderText: rgb(95, 133, 145),
+    messageBackground: #262626,
+    messageHeadTextColor: rgb(233, 233, 233),
+    messageTextColor: rgb(233, 233, 233),
+    messageTimestampColor: rgb(95, 133, 145),
+    buttonBackground: black,
+    buttonText: white,
+    shadowBox: 3px 5px 5px black,
+  ),
+  wickedwitch: (
+    fontType: 'Creepster',
+    fontSize: 2em,
+    backgroundColor: rgb(150, 0, 180),
+    barBackground: black,
+    barText: rgb(19, 218, 19),
+    inputBackground: white,
+    inputPlaceholderText: rgb(150, 0, 180),
+    messageBackground: rgb(19, 218, 19),
+    messageHeadTextColor: black,
+    messageTextColor: black,
+    messageTimestampColor: rgb(97, 0, 97),
+    buttonBackground: rgb(97, 0, 97),
+    buttonText: white,
+    shadowBox: 3px 5px 5px black,
+  ),
+  ghostbusters: (
+    fontType: 'Acme',
+    fontSize: 2em,
+    backgroundColor: rgb(5, 160, 0),
+    barBackground: black,
+    barText: rgb(187, 7, 7),
+    inputBackground: white,
+    inputPlaceholderText: gray,
+    messageBackground: black,
+    messageHeadTextColor: white,
+    messageTextColor: white,
+    messageTimestampColor: rgb(187, 7, 7),
+    buttonBackground: rgb(187, 7, 7),
+    buttonText: white,
+    shadowBox: 3px 5px 5px black,
+  ),
+  pumpkin: (
+    fontType: 'Kalam',
+    fontSize: 2em,
+    backgroundColor: rgb(228, 121, 59),
+    barBackground: rgb(99, 58, 42),
+    barText: rgb(228, 209, 123),
+    inputBackground: rgb(212, 201, 185),
+    inputPlaceholderText: rgb(88, 112, 75),
+    messageBackground: rgb(228, 209, 123),
+    messageHeadTextColor: black,
+    messageTextColor: black,
+    messageTimestampColor: rgb(99, 58, 42),
+    buttonBackground: rgb(31, 66, 31),
+    buttonText: white,
+    shadowBox: 3px 5px 5px black,
+  ),
+  beetlejuice: (
+    fontType: 'Creepster',
+    fontSize: 2em,
+    backgroundColor: rgb(199, 199, 199),
+    backgroundImage: image-url('https://www.shutterstock.com/image-photo/black-white-stripe-background-364199843', false, true),
+    barBackground: rgb(29, 28, 28),
+    barText: white,
+    inputBackground: rgb(199, 199, 199),
+    inputPlaceholderText: rgb(131, 10, 10),
+    messageBackground: rgb(29, 28, 28),
+    messageHeadTextColor: white,
+    messageTextColor: white,
+    messageTimestampColor: rgb(131, 10, 10),
+    buttonBackground: rgb(131, 10, 10),
+    buttonText: white,
+    shadowBox: 10px 10px rgb(131, 10, 10),
   )
-  // dark: (
-
-  // )
 );
 
 // Implmentation of themes

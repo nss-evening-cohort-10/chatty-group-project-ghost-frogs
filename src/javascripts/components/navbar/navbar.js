@@ -15,8 +15,8 @@ const createNavbar = () => {
 
     <div class="input-group input-group-lg">
       <div class="input-group-prepend"></div>
-      <input id="myText" class="form-control mr-sm-2" type="search" placeholder="Write Message..." aria-label="text input">
-        <button id="clearBtn" class="btn my-2 my-sm-0" type="submit">Clear</button>
+      <input id="myInput" class="form-control mr-sm-2" type="search" placeholder="Write Message..." aria-label="text input">
+        <button class="btn my-2 my-sm-0 clearing" type="submit">Clear</button>
     </div>
   </nav>
   `;

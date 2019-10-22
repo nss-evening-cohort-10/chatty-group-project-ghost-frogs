@@ -4,11 +4,14 @@
 .app-container {
   @include themify($themes) {
     background-color: themed('backgroundColor');
-    height: 100vh;
+    height: 100%;
+    font-family: themed('fontType');
+    font-size: themed('fontSize');
   }
   .navbar {
     @include themify($themes) {
     background-color: themed('barBackground');
+    color: themed('barText');
     box-shadow: themed('shadowBox');
     }
   }
@@ -23,6 +26,65 @@
     @include themify($themes) {
       background-color: themed('buttonBackground');
       color: themed('buttonText');
+    }
+  }
+  #chatBox {
+    @include themify($themes) {
+      background-color: themed('backgroundColor');
+      color: themed('messageTextColor');
+    }
+  }
+  .messageContainer {
+    @include themify($themes) {
+      background-color: themed('messageBackground');
+      color: themed('messageTextColor');
+      box-shadow: themed('shadowBox');
+    }
+  }
+  .newMessageContainer {
+    @include themify($themes) {
+      background-color: themed('messageBackground');
+      color: themed('messageTextColor');
+      box-shadow: themed('shadowBox');
+    }
+  }
+  input {
+    @include themify($themes) {
+      background-color: themed('inputBackground');
+    }
+  }
+  input::placeholder {
+    @include themify($themes) {
+      background-color: themed('inputBackground');
+      color: themed('inputPlaceholderText');
+      padding: 0;
+    }
+  }
+  .modal-body {
+    @include themify($themes) {
+      background-color: themed('inputBackground');
+    }
+  }
+  .modal-header {
+    @include themify($themes) {
+      background-color: themed('inputBackground');
+    }
+  }
+  .modal-footer {
+    @include themify($themes) {
+      background-color: themed('inputBackground');
+    }
+  }
+  .largeTextCheck {
+    @include themify($themes) {
+      background-color: themed('buttonBackground');
+      color: themed('buttonText');
+    }
+  }
+  .timestamp {
+    @include themify($themes) {
+      color: themed('messageTimestampColor');
+      font-style: italic;
     }
   }
   .checkSet {

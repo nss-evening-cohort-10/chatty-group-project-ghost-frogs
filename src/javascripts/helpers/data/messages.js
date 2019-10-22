@@ -26,11 +26,4 @@ const messages = [
 
 const getMessages = () => messages;
 
-// const clearMessages = () => {
-//   let removeAll = '';
-//   for (let i = 0; i < messages.length; i += 1) {
-//     removeAll += ``;
-//   }
-// };
-
 export default { getMessages };

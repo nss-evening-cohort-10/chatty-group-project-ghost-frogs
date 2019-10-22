@@ -1,10 +1,10 @@
 import $ from 'jquery';
-// import utilities from '../../helpers/utilities';
 
-const clearMessages = () => {
-  $('#clearBtn').on('click', () => {
-    $('#messageContainer').empty();
+const clearFunc = () => {
+  $('.clearing').on('click', () => {
+    $('.message').remove();
+    $('.clearing').toggleClass('disabled');
   });
 };
 
-export default { clearMessages };
+export default { clearFunc };
