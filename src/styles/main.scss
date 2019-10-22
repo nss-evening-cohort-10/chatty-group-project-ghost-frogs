@@ -32,6 +32,8 @@
     @include themify($themes) {
       background-color: themed('backgroundColor');
       color: themed('messageTextColor');
+      height: 100%;
+      min-height: 100vh;
     }
   }
   .messageContainer {
