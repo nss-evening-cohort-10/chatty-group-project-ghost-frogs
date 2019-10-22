@@ -16,7 +16,6 @@ const messagePrinter = () => {
   `;
   }
   utilities.printToDom('chatBox', domString);
-  console.log(messages);
 };
 
 export default { messagePrinter };

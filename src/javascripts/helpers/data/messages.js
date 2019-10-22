@@ -1,4 +1,4 @@
-const messages = [
+let messages = [
   {
     name: 'Beetlejuice',
     text: 'Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis.',
@@ -32,8 +32,8 @@ const messages = [
 ];
 
 const getMessages = () => {
-  if (messages.length > 10) {
-    messages.splice(10);
+  if (messages.length > 20) {
+    messages.splice(20);
     return messages;
   } return messages;
 };
@@ -42,4 +42,9 @@ const addToArray = (newMessage) => messages.unshift(newMessage);
 
 const deleteFromArray = (messageIndex) => messages.splice(messageIndex, 1);
 
-export default { getMessages, addToArray, deleteFromArray };
+const clearMessages = () => {
+  messages = [];
+};
+
+// eslint-disable-next-line object-curly-newline
+export default { getMessages, addToArray, deleteFromArray, clearMessages };
