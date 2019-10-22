@@ -1,25 +1,23 @@
 import $ from 'jquery';
 import 'bootstrap';
 import moment from 'moment';
+import data from '../../helpers/data/messages';
+import printer from '../placeholder/placeholder';
 import './addMessages.scss';
 
-const addMessage = (e) => {
-  const typedValue = e.target.value;
-  let newMessage = [];
-  newMessage += `
-    <div class="newMessageContainer message">
-      <span class="closebtn">×</span>
-      <p>${typedValue}</p>
-      <div class="timestamp">${moment().format('LLL')}</div>
-    </div>`;
-  $('#chatBox').prepend(newMessage);
-};
 
-const deleteMessage = () => {
-  $('.closebtn').on('click', (event) => {
-    event.preventDefault();
-    $(event.target).parent('.message').remove();
-  });
+let counter = 6;
+
+const createNewMessage = (e) => {
+  const typedValue = e.target.value;
+  const newMessage = {
+    name: 'Me',
+    text: `${typedValue}`,
+    timeStamp: `${moment().format('LLL')}`,
+    id: `message${counter}`,
+  };
+  counter += 1;
+  data.addToArray(newMessage);
 };
 
 const inputCreateMessage = () => {
@@ -27,12 +25,20 @@ const inputCreateMessage = () => {
     if (e.keyCode === 13) {
       $('.clearing').attr('disabled', false);
       e.preventDefault();
-      addMessage(e);
+      createNewMessage(e);
       $('#myInput').val('');
-      deleteMessage();
+      printer.messagePrinter();
     }
   });
 };
 
+// const messageLimit = () => {
+//   if ($('.message').length < 20) {
+//     inputCreateMessage();
+//   } else if ($('.message').length >= 20) {
+//     $('div:nth-child(26)').remove();
+//     inputCreateMessage();
+//   }
+// };
 
-export default { inputCreateMessage, deleteMessage };
+export default { inputCreateMessage };
