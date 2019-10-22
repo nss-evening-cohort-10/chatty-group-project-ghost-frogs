@@ -15,7 +15,7 @@ const init = () => {
   deleter.deleteListener();
   clearMessages.clearFunc();
   theme.addCheckListener();
-  addMessages.messageLimit();
+  addMessages.inputCreateMessage();
   largeText.addLargeCheckListener();
   customizer.init();
 };

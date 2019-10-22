@@ -2,9 +2,8 @@ import utilities from '../../helpers/utilities';
 import './placeholder.scss';
 import data from '../../helpers/data/messages';
 
-const messages = data.getMessages();
-
 const messagePrinter = () => {
+  const messages = data.getMessages();
   let domString = '';
   for (let i = 0; i < messages.length; i += 1) {
     domString += `
@@ -17,6 +16,7 @@ const messagePrinter = () => {
   `;
   }
   utilities.printToDom('chatBox', domString);
+  console.log(messages);
 };
 
 export default { messagePrinter };

@@ -31,7 +31,12 @@ const messages = [
   },
 ];
 
-const getMessages = () => messages;
+const getMessages = () => {
+  if (messages.length > 10) {
+    messages.splice(10);
+    return messages;
+  } return messages;
+};
 
 const addToArray = (newMessage) => messages.unshift(newMessage);
 
