@@ -33,5 +33,13 @@ const inputCreateMessage = () => {
   });
 };
 
+const messageLimit = () => {
+  if ($('.message').length < 20) {
+    inputCreateMessage();
+  } else if ($('.message').length >= 20) {
+    $('div:nth-child(26)').remove();
+    inputCreateMessage();
+  }
+};
 
-export default { inputCreateMessage, deleteMessage };
+export default { deleteMessage, messageLimit };

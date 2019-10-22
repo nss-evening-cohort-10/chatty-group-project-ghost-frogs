@@ -12,8 +12,8 @@ const init = () => {
   placeholder.makeText();
   // placeholder.timeStamp();
   theme.addCheckListener();
-  addMessages.inputCreateMessage();
   addMessages.deleteMessage();
+  addMessages.messageLimit();
   largeText.addLargeCheckListener();
   customizer.init();
 };
