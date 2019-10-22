@@ -1,6 +1,7 @@
 import utilities from '../../helpers/utilities';
 import './placeholder.scss';
 import m from '../../helpers/data/messages';
+import deleter from '../deleteMessages/deleteMessages';
 
 const messages = m.getMessages();
 
@@ -29,6 +30,7 @@ const makeText = () => {
   `;
   }
   utilities.printToDom('chatBox', domString);
+  deleter.deleteListener();
 };
 
 

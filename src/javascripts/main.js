@@ -14,7 +14,7 @@ const init = () => {
   clearMessages.clearFunc();
   // placeholder.timeStamp();
   theme.addCheckListener();
-  addMessages.deleteMessage();
+  // addMessages.deleteMessage();
   addMessages.messageLimit();
   largeText.addLargeCheckListener();
   customizer.init();

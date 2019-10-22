@@ -4,7 +4,6 @@ import moment from 'moment';
 import data from '../../helpers/data/messages';
 import printer from '../placeholder/placeholder';
 import './addMessages.scss';
-import messages from '../../helpers/data/messages';
 
 let counter = 6;
 
@@ -29,15 +28,18 @@ const addMessage = (e) => {
   printer.makeText();
 };
 
-const deleteMessage = () => {
-  $('.closebtn').on('click', (event) => {
-    event.preventDefault();
-    const idClick = event.target;
-    for (let i = 0; i < messages.length; i +=1) {
-      j
-    }
-    data.deleteFromArray();
-  });
+const findObjectFromEvent = (e) => {
+  e.preventDefault();
+  const selection = e.target.id;
+  const messages = data.getMessages();
+  const messageIndex = messages.findIndex((message) => message.id === selection);
+  data.deleteFromArray(messageIndex);
+  console.log(messageIndex);
+  printer.makeText();
+};
+
+const deleteListener = () => {
+  $('.closebtn').on('click', findObjectFromEvent);
 };
 
 const inputCreateMessage = () => {
@@ -46,7 +48,7 @@ const inputCreateMessage = () => {
       e.preventDefault();
       addMessage(e);
       $('#myInput').val('');
-      deleteMessage();
+      deleteListener();
     }
   });
 };
@@ -60,4 +62,4 @@ const messageLimit = () => {
   }
 };
 
-export default { deleteMessage, messageLimit };
+export default { messageLimit };

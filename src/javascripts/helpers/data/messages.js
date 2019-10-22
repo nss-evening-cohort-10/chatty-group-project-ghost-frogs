@@ -35,6 +35,6 @@ const getMessages = () => messages;
 
 const addToArray = (newMessage) => messages.unshift(newMessage);
 
-// const deleteFromArray = messages.indexOf().attr('id').splice( , 1)
+const deleteFromArray = (messageIndex) => messages.splice(messageIndex, 1);
 
-export default { getMessages, addToArray };
+export default { getMessages, addToArray, deleteFromArray };
