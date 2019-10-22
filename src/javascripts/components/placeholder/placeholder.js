@@ -7,29 +7,29 @@ const messages = m.getMessages();
 const makeText = () => {
   let domString = [];
   for (let i = 0; i < messages.length; i += 1) {
-    if (messages[i].name === 'Beetlejuice') {
-      domString += `
-    <div class="messageContainer message">
-      <span class="closebtn">×</span>
-      <h6>${messages[i].name}</h6>
-      <p>${messages[i].text}</p>
-      <div class="timestamp">${messages[i].timeStamp}</div>
-    </div>
-    <br>
-  `;
-    } else {
-      domString += `
+  //   if (messages[i].name === 'Beetlejuice') {
+  //     domString += `
+  //   <div class="messageContainer message">
+  //     <span class="closebtn" id="${messages[i].id}">×</span>
+  //     <h6>${messages[i].name}</h6>
+  //     <p>${messages[i].text}</p>
+  //     <div class="timestamp">${messages[i].timeStamp}</div>
+  //   </div>
+  //   <br>
+  // `;
+  //   } else {
+    domString += `
     <div class="messageContainer message" style="margin-right: 5px; margin-left: auto;">
-      <span class="closebtn">×</span>
+      <span class="closebtn" id="${messages[i].id}">×</span>
       <h6>${messages[i].name}</h6>
       <p>${messages[i].text}</p>
       <div class="timestamp">${messages[i].timeStamp}</div>
     </div>
     <br>
   `;
-    }
   }
   utilities.printToDom('chatBox', domString);
 };
+
 
 export default { makeText };

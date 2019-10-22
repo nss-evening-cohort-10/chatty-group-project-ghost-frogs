@@ -1,24 +1,42 @@
 import $ from 'jquery';
 import 'bootstrap';
 import moment from 'moment';
+import data from '../../helpers/data/messages';
+import printer from '../placeholder/placeholder';
 import './addMessages.scss';
+import messages from '../../helpers/data/messages';
+
+let counter = 6;
 
 const addMessage = (e) => {
   const typedValue = e.target.value;
-  let newMessage = [];
-  newMessage += `
-    <div class="newMessageContainer message">
-      <span class="closebtn">×</span>
-      <p>${typedValue}</p>
-      <div class="timestamp">${moment().format('LLL')}</div>
-    </div>`;
-  $('#chatBox').prepend(newMessage);
+  // let newMessage = [];
+  // newMessage += `
+  //   <div class="newMessageContainer message">
+  //     <span class="closebtn">×</span>
+  //     <p>${typedValue}</p>
+  //     <div class="timestamp">${moment().format('LLL')}</div>
+  //   </div>`;
+  // $('#chatBox').prepend(newMessage);
+  const newMessage = {
+    name: 'Me',
+    text: `${typedValue}`,
+    timestamp: `${moment().format('LLL')}`,
+    id: `message${counter}`,
+  };
+  counter += 1;
+  data.addToArray(newMessage);
+  printer.makeText();
 };
 
 const deleteMessage = () => {
   $('.closebtn').on('click', (event) => {
     event.preventDefault();
-    $(event.target).parent('.message').remove();
+    const idClick = event.target;
+    for (let i = 0; i < messages.length; i +=1) {
+      j
+    }
+    data.deleteFromArray();
   });
 };
 
