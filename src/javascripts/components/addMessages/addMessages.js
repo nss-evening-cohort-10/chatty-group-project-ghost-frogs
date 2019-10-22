@@ -13,7 +13,7 @@ const createNewMessage = (e) => {
   const newMessage = {
     name: 'Me',
     text: `${typedValue}`,
-    timestamp: `${moment().format('LLL')}`,
+    timeStamp: `${moment().format('LLL')}`,
     id: `message${counter}`,
   };
   counter += 1;
